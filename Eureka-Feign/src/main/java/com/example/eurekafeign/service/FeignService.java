@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author: kangwei
  * @create: 2023-02-25 16:25
  **/
-@FeignClient(value = "eureka-client")
+@FeignClient(value = "eureka-client", fallback = FeignServiceHystrix.class)
 public interface FeignService {
-
     @GetMapping("/hello")
     String getFeignHello();
 }
