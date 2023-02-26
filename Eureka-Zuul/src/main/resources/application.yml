@@ -1,0 +1,19 @@
+server:
+  port: 8086
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8081/eureka/
+spring:
+  application:
+    name: eureka-zuul
+zuul:  #配置路由
+  routes:
+    api-ribbon:
+      path: /api-ribbon/**
+      serviceId: eureka-ribbon
+    api-feign:
+      path: /api-feign/**
+      serviceId: eureka-feign

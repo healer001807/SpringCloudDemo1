@@ -1,0 +1,23 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          search-paths:
+            - SpringCloudDemo1
+          username: 2713445913@qq.com
+          password: 072010kwW
+          uri: https://github.com/healer001807/SpringCloudDemo1.git  #存放git
+        bootstrap: true
+      label: master
+  profiles:
+    active: native
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8081/eureka/
