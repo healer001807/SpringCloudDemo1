@@ -9,8 +9,8 @@ spring:
         git:
           search-paths:
             - SpringCloudDemo1
-          username: 2713445913@qq.com
-          password: 072010kwW
+          username: #*****
+          password: #*****
           uri: https://github.com/healer001807/SpringCloudDemo1.git  #存放git
         bootstrap: true
       label: master
