@@ -4,6 +4,8 @@ spring:
   application:
     name: eureka-ribbon
   #向注册中心注册服务
+  zipkin:
+    base-url: http://127.0.0.1:8080/
 eureka:
   client:
     service-url:
